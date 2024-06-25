@@ -1,0 +1,26 @@
+name: CI -> Deploy to My Website
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy-front:
+    runs-on: ubuntu-latest
+    environment:
+      name: pao
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Deploy the front end via FTP
+      - name: Upload via FTP
+        uses: airvzxf/ftp-deployment-action@latest
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local_dir: ./
+          remote_dir: ${{ secrets.FTP_REMOTE_DIR }}
+          delete: false
