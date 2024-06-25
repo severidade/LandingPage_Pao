@@ -1,0 +1,57 @@
+body{
+	background: #f1ba24;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+
+#vapor1 {/*comprimento dele é 83px;*/
+	stroke-dasharray: 83;
+	stroke-dashoffset: -83;
+	animation: draw 2.9s ease-in-out infinite;
+	
+
+}
+#vapor2 { /*comprimento dele é 88px;*/
+	stroke-dasharray: 88;
+	stroke-dashoffset: -88 /*-176*/;
+	animation: draw2 3.2s ease-in-out infinite;
+	/*stroke: #fff; */
+	
+	
+}
+
+#vapor3 { /*comprimento dele é 77px;*/
+	stroke-dasharray: 77;
+	stroke-dashoffset: -77 /*-154*/;
+	animation: draw3 2.9s ease-in-out infinite;
+}
+
+@keyframes draw{
+	100% {
+		/*stroke-dasharray: 40;*/
+		stroke-dashoffset: 0;
+	}
+
+}
+@keyframes draw2{
+
+	100% {
+		/*stroke-dasharray: 42;*/
+		stroke-dashoffset: 0;	
+	}
+
+}
+@keyframes draw3{
+	100% {
+		
+		stroke-dashoffset: 0;
+	}
+
+}
+/*
+var js = document.querySelector("#vapor1");
+js.getTotalLength()
+*/

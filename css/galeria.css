@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400i,900i&display=swap');
+
+html {
+  height: 100%;
+}
+/*
+body {
+  background: linear-gradient(130deg, #07d9a3, #048fee);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 16s ease infinite;
+  animation: gradient 16s ease infinite;
+}*/
+
+
+
+
+.slick-slider {
+  /*margin: 30px auto 50px;*/
+  margin: 0px;
+}
+.slick-prev,
+.slick-next {
+  color: white;
+  opacity: 1;
+  height: 40px;
+  width: 40px;
+  margin-top: -20px;
+}
+.slick-prev path,
+.slick-next path {
+  fill: rgba(255, 255, 255, 0.4);
+}
+.slick-prev:hover path,
+.slick-next:hover path {
+  fill: #FFFFFF;
+}
+
+.slick-prev {
+  left: -35px;
+}
+
+.slick-next {
+  right: -35px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  content: none;
+}
+
+.slick-dots li button:before {
+
+  opacity: 0.5;
+  font-size: 60px;
+  color:#f7ebd6;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #000;
+}
+
+.quote-container {
+  min-height: 200px;
+  font-size: 36px;
+  margin: 0 20px;
+  position: relative;
+}
+.quote-container:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+
+
+
+
+
+
+.quote-container .portrait {
+    position: absolute;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100%;
+}
+.quote-container .portrait img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.quote-container .quote {
+  position: relative;
+  z-index: 600;
+  padding: 0px;
+  margin: 0;
+  font-size: 0.45em;
+  font-style: italic;
+  line-height: 1.7 !important;
+  /*font-family: Calibri;*/
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  color: black;
+  /*border: solid 1px tomato;*/
+  padding-top: 120px;
+  font-style: italic;
+}
+.quote-container .quote p {
+  position: relative;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-weight: 400;
+}
+.quote-container .quote p:first-child::before {
+    content: "";
+    opacity: 0.3;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url(../img/svg/aspas.svg) no-repeat center;
+        background-size: auto;
+    background-size: contain;
+    text-shadow: none;
+    z-index: -10;
+    transform: translate(-20px, -51px);
+}
+.quote-container .quote cite {
+  display: block;
+  font-size: 14px;
+}
+.quote-container .quote cite span {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  font-style: italic;
+  font-weight: 900;
+}
+.quote-container .quote cite a {
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1em;
+  color: #fde19a;
+}
+
+
+
+.dragging .quote-container {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.octogon {
+  -webkit-clip-path: polygon(50% 0%, 38.11% 6.7%, 24.99% 6.72%, 18.06% 18.44%, 6.7% 25%, 6.56% 38.64%, 0% 50%, 6.7% 61.89%, 6.7% 75%, 18.44% 81.94%, 25% 93.3%, 38.64% 93.44%, 50% 100%, 61.88% 93.3%, 75% 93.3%, 81.94% 81.56%, 93.3% 74.9%, 93.44% 61.36%, 100% 50%, 93.3% 38.11%, 93.3% 25%, 81.56% 18.06%, 74.96% 6.7%, 61.36% 6.56%, 50% 0%);
+  clip-path: url(#octogon);
+  height: 140px;
+  width: 140px;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 5% 0%;
+  }
+  50% {
+    background-position: 96% 100%;
+  }
+  100% {
+    background-position: 5% 0%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 5% 0%;
+  }
+  50% {
+    background-position: 96% 100%;
+  }
+  100% {
+    background-position: 5% 0%;
+  }
+}

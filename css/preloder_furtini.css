@@ -1,0 +1,92 @@
+
+.loader-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f1ba24;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+/*
+.loader {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+  border-radius: 10%;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+
+}
+
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+}*/
+#vapor1 {/*comprimento dele é 83px;*/
+  stroke-dasharray: 83;
+  stroke-dashoffset: -83;
+  animation: draw 2.9s ease-in-out infinite;
+  
+
+}
+#vapor2 { /*comprimento dele é 88px;*/
+  stroke-dasharray: 88;
+  stroke-dashoffset: -88 /*-176*/;
+  animation: draw2 3.2s ease-in-out infinite;
+  /*stroke: #fff; */
+  
+  
+}
+
+#vapor3 { /*comprimento dele é 77px;*/
+  stroke-dasharray: 77;
+  stroke-dashoffset: -77 /*-154*/;
+  animation: draw3 2.9s ease-in-out infinite;
+}
+
+@keyframes draw{
+  100% {
+    /*stroke-dasharray: 40;*/
+    stroke-dashoffset: 0;
+  }
+
+}
+@keyframes draw2{
+
+  100% {
+    /*stroke-dasharray: 42;*/
+    stroke-dashoffset: 0; 
+  }
+
+}
+@keyframes draw3{
+  100% {
+    
+    stroke-dashoffset: 0;
+  }
+
+}
